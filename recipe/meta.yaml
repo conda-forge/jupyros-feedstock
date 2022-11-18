@@ -1,5 +1,5 @@
 {% set name = "jupyros" %}
-{% set version = "0.6.0" %}
+{% set version = "0.6.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/jupyros-{{ version }}.tar.gz
-  sha256: 7f0652a9c4945b2a3adcb0c5dd0e8f82a4cd6754233b19140dbec0f7d69becb3
+  sha256: 6ecb1c7512903b155c42ad1865b05955771d90b997f25a6c1682d05d0b474090
 
 build:
   noarch: python
