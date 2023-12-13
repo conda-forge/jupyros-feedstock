@@ -29,7 +29,7 @@ requirements:
     - numpy
     - rospkg
     - ipycanvas
-    - notebook
+    - notebook <7.0
 
 test:
   imports:
