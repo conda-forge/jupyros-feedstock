@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/jupyros-{{ version }}.tar.gz
-  sha256: 6ecb1c7512903b155c42ad1865b05955771d90b997f25a6c1682d05d0b474090
+  sha256: 0f55edbde842f5ec0b440c0b8b7bc1b962ad5017a1338bf6c88fa93b9a9774fd
 
 build:
   noarch: python
@@ -16,12 +16,12 @@ build:
 
 requirements:
   host:
-    - python >=3.7
-    - jupyter_packaging
+    - python >=3.9
+    - hatch
     - pip
   run:
-    - python >=3.7
-    - ipywidgets >=7.7.2,<8.0
+    - python >=3.9
+    - ipywidgets
     - bqplot
     - numpy
     - rospkg
