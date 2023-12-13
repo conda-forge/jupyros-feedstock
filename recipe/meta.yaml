@@ -20,6 +20,7 @@ requirements:
     - pip
     - hatch
     - hatchling
+    - nodejs
   run:
     - python >=3.7,<3.12
     - ipywidgets >=7.7.2,<8.0
