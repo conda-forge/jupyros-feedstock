@@ -16,11 +16,12 @@ build:
 
 requirements:
   host:
-    - python >=3.7
-    - jupyter_packaging
+    - python >=3.9
     - pip
+    - hatch
+    - hatchling
   run:
-    - python >=3.7
+    - python >=3.9
     - ipywidgets >=7.7.2,<8.0
     - bqplot
     - numpy
