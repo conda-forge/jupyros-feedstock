@@ -6,24 +6,24 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/jupyros-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/jupyros-{{ version }}.tar.gz
   sha256: e21cb6cd7535076cb2bf93f9b1aef002a313a11922e0f39dab954512663a2877
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.7,<3.12
+    - python {{ python_min }}
     - pip
     - hatch
     - hatchling
     - hatch-nodejs-version
     - hatch-jupyter-builder
   run:
-    - python >=3.7,<3.12
+    - python >={{ python_min }},<3.12
     - ipywidgets >=7.7.2,<8.0
     - bqplot
     - numpy
@@ -38,6 +38,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/RoboStack/jupyter-ros.git
